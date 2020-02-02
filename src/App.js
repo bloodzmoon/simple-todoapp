@@ -23,12 +23,34 @@ function App() {
     setTodos([ todo, ...todos ]);
   }
 
+  function toggleDone(id) {
+    setTodos(
+      todos.map(todo => {
+        if (todo.id === id) {
+          return {
+            ...todo,
+            done: !todo.done
+          };
+        }
+        return todo;
+      })
+    );
+  }
+
+  function removeTodo(id) {
+    setTodos(todos.filter(todo => todo.id !== id));
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <p>React TODO</p>
         <TodoForm addTodo={addTodo}/>
-        <TodoList todos={todos} />
+        <TodoList 
+          todos={todos} 
+          toggleDone={toggleDone}
+          removeTodo={removeTodo} 
+        />
       </header>
     </div>
   );
