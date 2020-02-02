@@ -1,5 +1,5 @@
 
-# S I M P L E· T O D O
+# S I M P L E · T O D O
 
 > Since 2020
 
