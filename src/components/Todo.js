@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/Todo.css';
 
 function Todo({ todo, toggleDone, removeTodo }) {
 
@@ -11,15 +12,20 @@ function Todo({ todo, toggleDone, removeTodo }) {
   }
 
   return (
-    <div style={{ display: "flex" }}>
-      <input type="checkbox" onClick={handleCheckbox} />
-      <li 
-        style={{
-          color: "white",
-          textDecoration: todo.done ? "line-through" : null
-        }}
-      >{todo.task}</li>
-      <button onClick={handleRemove}>X</button>
+    <div className="item-container">
+      <div className="wrapper">
+        <input 
+          className="checkbox" 
+          type="checkbox" 
+          onClick={handleCheckbox} 
+          defaultChecked={todo.done}
+        />
+        <div className={ todo.done ? "line" : null }></div>
+        <li 
+          className={ todo.done ? "li-done" : "li-notdone" }
+        >{todo.task}</li>
+      </div>
+      <button className="del" onClick={handleRemove}>x</button>
     </div>
   );
 }

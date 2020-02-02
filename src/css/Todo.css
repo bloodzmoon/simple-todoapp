@@ -1,0 +1,59 @@
+
+.item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 437px;
+  margin-left: -27px;
+}
+
+.wrapper {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  width: 82%;
+}
+
+.checkbox {
+  margin: 0;
+  width: 30px;
+  height: 30px;
+}
+
+li { transition: .5s }
+
+.li-notdone {
+  margin: .7em;
+  list-style: none;
+  font-size: 1.2em;
+}
+
+.li-done {
+  color: #BBB;
+  margin: .7em;
+  list-style: none;
+  font-size: 1.2em;
+}
+
+.line {
+  position: absolute;
+  margin: 0 40px;
+  width: 280px;
+  border-bottom: 1px solid #BBB;
+}
+
+.del {
+  flex-wrap: wrap;
+  background: crimson;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95px;
+  height: 40px;
+}
+
+.del:hover {
+  background: crimson;
+  transform: rotate(5deg) scale(1.1);
+}

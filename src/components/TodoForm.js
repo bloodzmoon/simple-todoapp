@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import uuid from 'uuid';
+import '../css/TodoForm.css';
 
 function TodoForm({ addTodo }) {
   const [todo, setTodo] = useState({
@@ -28,7 +29,7 @@ function TodoForm({ addTodo }) {
         value={todo.task}
         onChange={handleInputChange}
       />
-      <button type="submit">Submit</button>
+      <button type="submit">ADD</button>
     </form>
   );
 }
